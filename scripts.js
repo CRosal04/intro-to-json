@@ -81,14 +81,15 @@ function getUsers(data){
         //console.log(birthday)
         output+= `
         <section>
-        <h3> ${user.name.first} ${user.name.last}</h3>
-        <p>Username: ${user.login.username}</p>
-        <img src= "${user.picture.large}" alt ="" width = "160" height = "160"
-        <p>Birthday:${birthday.getMonth() + 1}-${birthday.getDate()} - ${birthday.getFullYear()}  </p>
-        <a href = " mailto: ${user.email}">${user.email} </a>
+        <h3>${user.name.first} ${user.name.last}</h3>
+        <p>Username:${user.login.username}</p>
+        <img src="${user.picture.large}" alt ="" width="160" height="160">
+        <p>Birthday: ${birthday.getMonth() + 1}-${birthday.getDate()} - ${birthday.getFullYear()}  </p>
+        <a href="mailto:${user.email}">${user.email}</a>
         </section>
         `
     }
+    outputDiv.innerHTML = output;
 }
 
 // call the function to display the cat photos on page load
